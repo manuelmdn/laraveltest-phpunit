@@ -23,4 +23,13 @@ class PostTest extends TestCase
 
         $this->assertEquals("phpunit-project",$post->slug);
     }
+
+    public function test_get_href(){
+        
+        $post = new Post();
+        $post->name = 'PhpUnit project'; 
+
+        $this->assertEquals('blog/phpunit-project', $post->href() );
+
+    }
 }
